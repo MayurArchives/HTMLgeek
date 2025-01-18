@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <script>
+        document.onkeydown = function (e) {
+            if (event.keyCode == 123) {
+                return false;
+            }
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+                return false;
+            }
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+                return false;
+            }
+            if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body oncontextmenu="return false;">
+    <div id="container">
+        <div id="formlabel">Personal details</div>
+
+        <form action="details" method="get">
+
+            <label for="salutation">Salutation<br />
+                <select>
+                    <option>--None--</option>
+                    <option>Mr.</option>
+                    <option>Mrs.</option>
+                </select>
+            </label><br />
+
+            <label for="name"><br />
+                First Name: <input type="text" name="name" placeholder="abcd"><br /><br />
+                Last Name: <input type="text" name="name" placeholder="abcd">
+            </label><br />
+
+            <label for="gender"><br />
+                Gender:
+                <input type="radio" name="gender"> Male
+                <input type="radio" name="gender"> Female
+            </label><br />
+
+            <label for="email"><br />
+                Email:<input type="email" name=email value="abc@gmail.com">
+            </label><br />
+
+            <label for="Dob"><br />
+                Date of birth:<input type="date" name="Dob">
+            </label><br />
+            <label for="Address"><br />
+                Address:<br />
+                <textarea name="Address" cols="30" rows="5"></textarea>
+            </label><br />
+
+            <label for="submit"><br />
+                <input type="submit">
+            </label>
+
+        </form>
+    </div>
+</body>
+
+</html>
